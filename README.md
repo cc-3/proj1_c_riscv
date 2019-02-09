@@ -1,2 +1,1 @@
-# pj1-2018
-Archivos base para proyecto
+# Project 1: C & RISC-V
