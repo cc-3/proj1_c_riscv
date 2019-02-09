@@ -21,7 +21,7 @@ void execute(Processor *processor, int prompt, int print) {
   Instruction instruction;
 
   /* fetch an instruction */
-  instruction.bits = load(memory, processor->PC,LENGTH_WORD, 1);
+  instruction.bits = load(memory, processor->PC, LENGTH_WORD, 1);
 
   /* interactive-mode prompt */
   if (prompt) {
@@ -33,7 +33,7 @@ void execute(Processor *processor, int prompt, int print) {
     decode_instruction(instruction);
   }
 
-  execute_instruction(instruction,processor,memory);
+  execute_instruction(instruction, processor, memory);
 
   // enforce x0 being hard-wired to 0
   processor->R[0] = 0;
@@ -133,7 +133,7 @@ int main(int argc, char **argv) {
   processor.R[2] = 0xEFFFF;
 
   /* simulate forever! */
-  while (1) execute(&processor,opt_interactive,opt_regdump);
+  while (1) execute(&processor,opt_interactive, opt_regdump);
 
   return 0;
 }
