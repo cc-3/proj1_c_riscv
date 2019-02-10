@@ -9,10 +9,12 @@
 void execute_rtype(Instruction, Processor *);
 void execute_itype_except_load(Instruction, Processor *);
 void execute_branch(Instruction, Processor *);
+void execute_jalr(Instruction, Processor *);
 void execute_jal(Instruction, Processor *);
 void execute_load(Instruction, Processor *, Byte *);
 void execute_store(Instruction, Processor *, Byte *);
 void execute_ecall(Processor *, Byte *);
+void execute_auipc(Instruction, Processor *);
 void execute_lui(Instruction, Processor *);
 
 
@@ -40,8 +42,6 @@ void execute_rtype(Instruction instruction, Processor *processor) {
 
 
 void execute_itype_except_load(Instruction instruction, Processor *processor) {
-  int shiftOp;
-  shiftOp = -1;
   switch(0) { // What do we switch on?
     /* YOUR CODE HERE */
     default:
@@ -63,8 +63,6 @@ void execute_ecall(Processor *p, Byte *memory) {
 
 
 void execute_branch(Instruction instruction, Processor *processor) {
-  int branchaddr;
-  branchaddr = 0;
   /* Remember that the immediate portion of branches
      is counting half-words, so make sure to account for that. */
   switch(0) { // What do we switch on?
@@ -98,16 +96,22 @@ void execute_store(Instruction instruction, Processor *processor, Byte *memory) 
 }
 
 
+void execute_jalr(Instruction instruction, Processor *processor) {
+  /* YOUR CODE HERE */
+}
+
+
 void execute_jal(Instruction instruction, Processor *processor) {
-  int nextPC;
-  nextPC = 0;
+  /* YOUR CODE HERE */
+}
+
+
+void execute_auipc(Instruction instruction, Processor *processor) {
   /* YOUR CODE HERE */
 }
 
 
 void execute_lui(Instruction instruction, Processor *processor) {
-  int imm;
-  imm = 0;
   /* YOUR CODE HERE */
 }
 
@@ -139,6 +143,5 @@ Word load(Byte *memory, Address address, Alignment alignment, int check_align) {
     handle_invalid_read(address);
   }
   /* YOUR CODE HERE */
-  uint32_t data = 0; // initialize our return value to zero
-  return data;
+  return 0;
 }

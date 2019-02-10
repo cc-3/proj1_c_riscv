@@ -15,7 +15,9 @@ void write_itype_except_load(Instruction);
 void write_load(Instruction);
 void write_store(Instruction);
 void write_branch(Instruction);
+void write_auipc(Instruction);
 void write_lui(Instruction);
+void write_jalr(Instruction);
 void write_jal(Instruction);
 void write_ecall(Instruction);
 
@@ -42,8 +44,6 @@ void write_rtype(Instruction instruction) {
 
 
 void write_itype_except_load(Instruction instruction) {
-  int shiftOp;
-  shiftOp = -1;
   switch(0) { // What do we switch on?
     /* YOUR CODE HERE */
     default:
@@ -85,7 +85,17 @@ void write_branch(Instruction instruction) {
 
 /* For the writes, probably a good idea to take a look at utils.h */
 
+void write_auipc(Instruction instruction) {
+  /* YOUR CODE HERE */
+}
+
+
 void write_lui(Instruction instruction) {
+  /* YOUR CODE HERE */
+}
+
+
+void write_jalr(Instruction instruction) {
   /* YOUR CODE HERE */
 }
 
