@@ -1,6 +1,7 @@
 # Project files
 riscv
 riscvcode/out
+autograder/
 
 # Prerequisites
 *.d
