@@ -4,7 +4,7 @@ HEADERS := types.h utils.h riscv.h
 ASM_TESTS := simple multiply random
 
 all: riscv part1 part2
-	@echo "=============All tests finished============="
+	@echo "============All tests finished============"
 
 .PHONY: part1 part2 %_disasm %_execute
 
